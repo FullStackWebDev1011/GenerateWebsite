@@ -1,0 +1,103 @@
+<% layout('./layout') %>
+
+<div class="max-w-content flex flex-col sm:flex-row sm:justify-between mt:4 sm:mt-12">
+    <div class="flex-1 sm:pr-4">
+        <img id="product-image"
+             class="w-full sm:w-80 sm:h-80 lg:w-96 lg:h-96 sm:object-contain sm:object-left rounded"
+             src="<%= it.post.postImages[0] %>"
+             alt="<%= it.post.postTitle %>">
+        </img>
+        <ul class="p-0 mt-4 flex">
+        <% it.post.postImages?.forEach(image => { %>
+            <li>
+                <button class="js-carousel mr-4 w-12 h-12 bg-cover bg-center rounded hover:scale-110 transition"
+                        onclick="setProductImage('<%= image %>')"
+                        style="background-image: url('<%= image %>')">
+                </button>
+            </li>
+        <% }) %>
+        </ul>
+    </div>
+
+    <div class="relative flex-1 mt-4 sm:mt-0">
+        <div class="absolute" style="left: -28rem; top:-6rem; z-index: -1; width: 72rem;">
+            <%~ includeFile("./shape.svg") %>
+        </div>
+
+        <ul>
+        <% it.post.categories?.forEach(category => { %>
+            <li class="inline-block px-3 py-1 text-sm mr-2 text-white bg-gray rounded-2xl">
+                <%= category %>
+            </li>
+        <% }) %>
+        </ul>
+
+        <h1 class="mt-4 font-serif font-bold text-3xl text-gray-dark leading-7">
+            <%= it.post.postTitle %>
+        </h1>
+
+        <div class="flex items-center mt-4 text-gray text-sm">
+            <span class="w-5 h-5">
+                <%~ includeFile("./thumbs.svg")%>
+            </span>
+            <span class="ml-1 mr-3"><%= it.post.likes?.length %></span>
+
+            <span class="w-5 h-5">
+                <%~ includeFile("./comment.svg")%>
+            </span>
+            <span class="ml-1"><%= it.post.comments?.length %></span>
+        </div>
+
+        <% if (it.post.postPrice !== "") { %>
+        <p class="mt-6 text-green-darkest">
+            <sup class="text-lg">€</sup>
+            <span class="text-2xl font-bold"><%= it.post.postPrice %></span>
+        </p>
+        <% } %>
+
+        <p class="mt-4 whitespace-pre-wrap tracking-wide text-gray"><%= it.post.postDescription.trim() %></p>
+
+        <div class="mt-6">
+            <a class="btn" href="https://flaschenpiraten-2.web.app/">
+                Hier geht’s an Bord
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="mt-16">
+    <%~ includeFile("./divider") %>
+</div>
+
+<div class="max-w-content mt-12">
+    <h2 class="heading">Das könnte dir auch gefallen</h2>
+
+    <ul class="flex flex-wrap mt-12 -ml-12 lg:-ml-8">
+        <% it.relatedPosts?.forEach((post) => { %>
+        <li class="pb-8 pl-12 lg:pl-8 w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/5">
+            <a href="<%= post.url %>">
+                <div class="w-full h-56 sm:h-56 md:h-48 lg:h-40 bg-cover bg-no-repeat bg-center"
+                     style="background-image: url('<%= post.postImages[0] %>')">
+                </div>
+                <h3 class="my-1 font-bold text-gray-dark"><%= post.postTitle %></h3>
+
+                <% if (post.postPrice !== "") { %>
+                <p class="text-green-darkest font-bold">
+                    <sup>€ </sup> <%= post.postPrice %>
+                </p>
+                <% } %>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
+</div>
+
+<div class="mt-16">
+    <%~ includeFile("./divider") %>
+</div>
+
+<script>
+ function setProductImage(url) {
+     document.getElementById("product-image").src = url;
+ }
+</script>

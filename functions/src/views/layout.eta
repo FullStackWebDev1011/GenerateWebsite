@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Flaschenpiraten | <%~ it.post.postTitle %></title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+        <link rel="manifest" href="/assets/site.webmanifest">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style type="text/css" media="screen">
+         <%~ includeFile("./app.css") %>
+        </style>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;600;700;900&display=swap"
+              rel="stylesheet">
+        <%~ includeFile('./seo.eta', { seo: it.seo }) %>
+    </head>
+    <body class="font-body">
+        <%~ includeFile('./header.eta') %>
+        <%~ it.body %>
+        <%~ includeFile('./footer.eta') %>
+    </body>
+</html>

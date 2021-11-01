@@ -1,0 +1,1197 @@
+:root {
+  --primary: #7ed957;
+  --primary-dark: #6bc246;
+  --accent: #303031;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  font-family: "Playfair Display", serif;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #303031;
+}
+
+p {
+  line-height: 1.5;
+  font-family: "Lato";
+  font-weight: normal;
+}
+
+#icon {
+  width: 60px;
+}
+
+#logo {
+  width: 427px;
+}
+
+.l-max-width {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em 4rem;
+}
+
+#mobile-menu {
+  display: none;
+}
+
+.nav-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-bar-left img {
+  display: block;
+}
+
+.nav-bar-right {
+  display: flex;
+}
+
+.nav-bar-item {
+  padding: 1em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: min(1.3vw, 20px);
+  font-weight: normal;
+  font-family: "Lato";
+}
+
+.nav-bar-item.primary {
+  color: var(--primary);
+}
+
+.nav-bar-item:hover {
+  color: var(--primary);
+}
+
+.welcome-container {
+  display: flex;
+  padding: 0 4em;
+  align-items: center;
+  justify-content: space-between;
+  align-items: stretch;
+  column-gap: 4em;
+}
+
+.welcome-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.welcome-left h1 {
+  margin-top: 100px;
+  font-size: 54px;
+  font-weight: 600;
+  margin-bottom: 140px;
+}
+
+.welcome-left p {
+  font-size: 22px;
+  color: #888;
+  width: 350px;
+  display: block;
+  font-family: "Lato";
+  margin: auto;
+  margin-bottom: 1.75em;
+}
+
+.welcome-left img {
+  display: block;
+  margin: auto;
+}
+/* .welcome-left .primary-button {
+} */
+
+.primary-button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 350px;
+  padding: 1.25em 0;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Lato";
+  font-size: 18px;
+  background-color: var(--primary);
+  margin-top: 1.75em;
+  margin-bottom: 1.75em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ios-android-download {
+  width: 350px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ios-android-download img {
+  width: 100%;
+}
+.ios-android-download a:nth-child(1) {
+  width: 36.7%;
+  display: block;
+  margin: 0;
+}
+
+.ios-android-download a:nth-child(2) {
+  width: 41.8%;
+  display: block;
+  margin: 0;
+}
+
+.primary-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.welcome-right {
+  flex: 1;
+  background: url("../assets/phone-bg.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-right #phone-frame {
+  width: calc(1.32 * 310px);
+  height: calc(1.32 * 468px);
+  display: block;
+  margin: auto;
+  position: absolute;
+  z-index: 99;
+  pointer-events: none;
+}
+
+.phone {
+  width: calc(1.32 * 310px);
+  height: calc(1.32 * 468px);
+  position: relative;
+  margin: auto;
+}
+
+.phone-notifications-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+}
+
+.phone-notifications-center p {
+  font-weight: 900;
+  font-family: "Lato";
+  font-size: 10px;
+}
+
+.phone-content {
+  position: absolute;
+  border-radius: 40px;
+  top: 4px;
+  bottom: 20px;
+  left: 58px;
+  right: 54px;
+  background-color: white;
+  margin: auto;
+  padding: 14px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-content .app-bar {
+  width: 100%;
+}
+
+.phone-content .app-bar img {
+  width: 100%;
+  display: block;
+}
+
+.phone-content .phone-body {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.phone-content .phone-body img {
+  width: 100%;
+  display: block;
+}
+
+.phone-content .bottom-bar {
+  width: 100%;
+  display: block;
+}
+
+.phone-content .bottom-bar {
+  display: block;
+  background-color: transparent;
+  /* margin-left: 18px; */
+  position: absolute;
+  right: 19px;
+  bottom: 30px;
+  height: 56px;
+  cursor: default;
+}
+
+.phone-content .bottom-bar img {
+  width: 100%;
+  display: block;
+}
+
+/* FEATURES SECTION */
+
+.features-section {
+  margin-top: 132px;
+  text-align: center;
+  padding: 4em;
+}
+
+.features-title h1 {
+  font-weight: 400;
+  margin-bottom: 48px;
+  margin-bottom: 32px;
+  font-size: 48px;
+}
+
+.features-title p {
+  font-weight: 300;
+  font-size: 22px;
+  width: min(90vw, 1119px);
+  margin: auto;
+}
+
+.features-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: min(7vw, 168px);
+  row-gap: 4em;
+  margin: 4em min(5vw, 207px);
+}
+
+.features-card {
+  box-shadow: #0000001f 0 2px 12px;
+  padding: min(5vw, 4em);
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.features-card h3 {
+  margin: 1em 0;
+  font-size: 24px;
+  font-family: "Playfair Display";
+}
+
+.divider {
+  width: 100%;
+  display: block;
+}
+
+/* social-shopping */
+
+.social-shopping .social-shopping-title h2 {
+  padding-top: 4em;
+  font-size: 48px;
+  font-weight: normal;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.social-shopping .social-shopping-title p {
+  font-weight: 300;
+  font-size: 22px;
+  width: min(90vw, 1160px);
+  margin: auto;
+  text-align: center;
+}
+
+.social-shopping-section .icon {
+  margin-bottom: 1.25em;
+}
+
+.social-shopping-section {
+  display: flex;
+  align-items: center;
+  column-gap: 4em;
+  padding: 4em;
+  padding-right: 0em;
+}
+
+.social-shopping-section h1 {
+  font-weight: 400;
+  font-size: 48px;
+  margin-bottom: 0.5em;
+}
+
+.social-shopping-section p {
+  font-weight: 300;
+  font-size: 18px;
+  margin-right: 4em;
+}
+
+.social-shopping-section .section-left {
+  flex: 1;
+}
+
+.social-shopping-section .section-right {
+  flex: 1;
+}
+
+.social-shopping-section:nth-child(2) {
+  padding: 4em;
+  padding-left: 0em;
+}
+
+.social-shopping-section:nth-child(2) img.section-cover {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.social-shopping-section img.section-cover {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  width: 80%;
+  object-fit: scale-down;
+}
+
+/* treasure-section */
+.treasure-section {
+  padding: 4em;
+}
+
+.treasure-section h1 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.treasure-section-body {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 1.5;
+  column-gap: 8em;
+}
+
+.treasure-section-body img {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.treasure-section-body .section-left {
+  flex: 3;
+}
+
+.treasure-section-body .section-right {
+  flex: 1;
+  margin-left: 10vw;
+}
+
+/* ship-section */
+.ship-section {
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 118px;
+  padding: 58px 132px 0 132px;
+  display: flex;
+  line-height: 1.5;
+  column-gap: 4em;
+  font-size: 18px;
+}
+
+.ship-section-shape {
+  position: absolute;
+  left: -2em;
+  background: url("../assets/unsere-bg.svg") no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 50%;
+  z-index: -1;
+}
+
+.ship-section h2 {
+  font-weight: normal;
+  font-size: 48px;
+  margin-bottom: 1em;
+}
+
+.ship-section img {
+  display: block;
+  margin: auto;
+}
+
+.ship-section .section-left {
+  flex: 2;
+}
+
+.ship-section .section-right {
+  flex: 3;
+}
+
+/* pirates-section */
+.pirates-section {
+  display: flex;
+  padding: 4em;
+  column-gap: 4em;
+  background: url("../assets/comme-bg.svg") no-repeat;
+}
+
+.pirates-section h1 {
+  margin-bottom: 1em;
+  font-weight: normal;
+  font-size: 48px;
+}
+
+.pirates-section p {
+  line-height: 1.5;
+  font-size: 18px;
+}
+.pirates-section .section-right {
+  flex: 1;
+}
+
+.pirates-section .section-left {
+  flex: 1;
+}
+
+/* social-contact */
+.social-contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 4em;
+}
+
+.social-contact .section-right {
+  display: flex;
+}
+
+.contact-item {
+  display: block;
+  font-family: "Lato";
+  font-weight: bold;
+  margin-left: 1em;
+  color: var(--accent);
+  text-decoration: none;
+  font-style: normal;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.contact-item.primary {
+  color: var(--primary);
+}
+
+.contact-item:hover {
+  color: var(--primary-dark);
+}
+
+/* footer-section */
+
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 4em;
+  font-weight: normal;
+  font-family: "Lato";
+}
+
+.footer-section .section-right {
+  text-align: right;
+}
+.phone.mobile {
+  display: none;
+}
+
+#social-filters-desc-image {
+  display: block;
+  margin: auto;
+  width: 200px;
+}
+
+/* --------- MOBILE --------- */
+@media only screen and (max-width: 740px) {
+  #icon {
+    width: 30.01px;
+  }
+  #logo {
+    width: 160.05px;
+  }
+
+  .nav-bar-left {
+    gap: 14px;
+  }
+
+  #mobile-menu {
+    display: block;
+  }
+
+  .nav-bar {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em 2rem;
+    z-index: 999;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    box-shadow: #0000001f 0 2px 12px;
+  }
+
+  #nav-bar-items {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 20vw;
+    bottom: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: #0000001f 0 8px 12px;
+    transition: all 0.25s ease-in-out;
+  }
+
+  #nav-bar-items a {
+    display: block;
+    font-size: 20px;
+  }
+
+  .nav-bar-item {
+    font-size: 8px;
+  }
+
+  .welcome-container {
+    margin-top: 64px;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-items: stretch;
+    column-gap: 4em;
+  }
+
+  .welcome-left h1 {
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 12px;
+    font-size: 25px;
+    padding: 0 1em;
+  }
+  .welcome-left p {
+    font-size: 18px;
+    color: #888;
+    width: 240px;
+    display: block;
+    margin-top: 44px;
+    margin-bottom: 32px;
+  }
+
+  .welcome-left .ios-android-download {
+    display: flex;
+    margin: auto;
+    width: 240px;
+  }
+  .primary-button {
+    font-size: 18px;
+    width: 240px;
+    padding: 12px 0;
+  }
+
+  .welcome-left .phone-notifications-center p {
+    font-weight: 900;
+    font-family: "Lato";
+    font-size: 10px;
+    margin: 0;
+  }
+
+  .phone {
+    display: none;
+  }
+  .phone.mobile {
+    display: block;
+    background: url("../assets/feed/mobile-phone-bg.svg") no-repeat;
+    background-size: 95%;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.9);
+  }
+  .phone.mobile .phone-content {
+    margin: 8px;
+  }
+
+  .phone.mobile #phone-frame {
+    display: block;
+    margin: auto;
+    position: absolute;
+    z-index: 99;
+    pointer-events: none;
+  }
+
+  .features-section {
+    padding: 21px;
+  }
+
+  .features-title {
+    padding: 1em;
+  }
+  .features-title h1 {
+    font-size: 21px;
+    margin-bottom: 24px;
+  }
+  .features-title p {
+    font-size: 10px;
+    width: auto;
+  }
+
+  .features-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 1em;
+    margin: 0;
+  }
+
+  .features-card {
+    box-shadow: 0px 0.723457px 2.89383px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 9px;
+  }
+
+  .features-card img {
+    width: 32px;
+  }
+
+  .features-card h3 {
+    margin: 1em 0;
+    font-size: 10px;
+    font-family: "Playfair Display";
+  }
+
+  /* SOCIAL SHOPPING */
+
+  .social-shopping {
+    padding: 0;
+  }
+
+  .social-shopping .social-shopping-title {
+    padding: 21px;
+  }
+
+  .social-shopping .social-shopping-title h2 {
+    font-size: 18px;
+    padding-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .social-shopping .social-shopping-title p {
+    font-size: 10px;
+    width: auto;
+    margin: auto;
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 10px;
+  }
+
+  .social-shopping-section {
+    column-gap: 16px;
+    padding: 32px 0 32px 21px;
+    align-items: flex-start;
+    min-height: min(232px, 50vw);
+  }
+
+  .social-shopping-section:nth-child(2) {
+    padding: 1em 0;
+    padding: 32px 21px 32px 0;
+  }
+
+  .social-shopping-section:nth-child(2) .section-left {
+    flex: 3;
+  }
+
+  .social-shopping-section .section-left {
+    flex: 5;
+    position: relative;
+  }
+
+  .social-shopping-section .section-right {
+    flex: 2;
+    position: relative;
+  }
+
+  .social-shopping-section img.section-cover {
+    display: block;
+    width: min(232px, 50vw);
+    right: 0;
+    position: absolute;
+    margin: 0;
+    z-index: -1;
+  }
+
+  .social-shopping-section:nth-child(2) img.section-cover {
+    left: 0;
+  }
+
+  #social-filters-desc-image {
+    display: block;
+    margin: auto;
+    padding-top: 12px;
+    padding-right: 30%;
+    width: 96px;
+  }
+
+  .social-shopping-section img.icon {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 8px;
+  }
+
+  .social-shopping-section h1 {
+    font-size: 15px;
+    margin: 0 0 12px 0;
+    width: 90%;
+  }
+
+  .social-shopping-section p {
+    font-size: 10px;
+    margin: 0;
+    width: 65%;
+  }
+
+  /* Treasure Section */
+
+  .treasure-section {
+    padding: 1em;
+    margin-top: 2em;
+  }
+  .treasure-section .section-left p {
+    font-size: 10px;
+  }
+
+  .treasure-section h1 {
+    font-size: 18px;
+    margin-bottom: 32px;
+    font-weight: normal;
+  }
+  .treasure-section-body {
+    flex-direction: row;
+    column-gap: 21px;
+  }
+
+  .treasure-section-body .section-left {
+    flex: 3;
+  }
+
+  .treasure-section-body .section-right {
+    flex: 1;
+  }
+
+  .treasure-section-body .section-right img {
+    width: 100%;
+  }
+
+  /* ship-section */
+  .ship-section {
+    padding: 1em;
+    background-size: 50%;
+  }
+  .ship-section h2 {
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .ship-section p {
+    font-size: 10px;
+    font-weight: normal;
+  }
+
+  /* pirates-section */
+  .pirates-section {
+    padding: 1em;
+    background-position: top;
+    background-size: 100%;
+  }
+  .pirates-section h1 {
+    font-size: 18px;
+  }
+
+  .pirates-section p {
+    font-size: 10px;
+  }
+
+  .pirates-section .primary-button {
+    width: 134px;
+    font-size: 9.5px;
+    padding: 6px 0;
+    margin-left: 20%;
+  }
+
+  .social-contact {
+    padding: 1em;
+    margin-top: 32px;
+  }
+  .social-contact .section-left img {
+    width: 72px;
+  }
+
+  .social-contact .section-right a {
+    display: block;
+    margin: 0;
+    font-size: 6.5px;
+    margin-right: 4px;
+  }
+  .social-contact .section-right {
+    margin-top: 12px;
+  }
+
+  /* footer-section */
+  .footer-section {
+    padding: 2em;
+    font-size: 5.76px;
+  }
+}
+
+/* --------- TABLET / IPAD --------- */
+@media only screen and (min-width: 740px) and (max-width: 1024px) {
+  #icon {
+    width: 19.2px;
+  }
+  #logo {
+    width: 102.38px;
+  }
+
+  .nav-bar-left {
+    gap: 8.96px;
+  }
+
+  .nav-bar-item {
+    font-size: 11px;
+  }
+
+  .welcome-container {
+    margin-top: 64px;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-items: stretch;
+    column-gap: 4em;
+  }
+
+  .welcome-left h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 36px;
+    padding: 0 4em;
+  }
+
+  .welcome-left p {
+    font-size: 20px;
+    color: #888;
+    width: 275px;
+    display: block;
+    margin-top: 44px;
+    margin-bottom: 32px;
+  }
+
+  .welcome-left .ios-android-download {
+    margin: auto;
+    width: 275px;
+  }
+  .primary-button {
+    font-size: 15px;
+    width: 275px;
+    padding: 8px 0;
+  }
+
+  .welcome-left .phone-notifications-center p {
+    font-weight: 900;
+    font-family: "Lato";
+    font-size: 10px;
+    margin: 0;
+  }
+
+  .phone {
+    display: none;
+  }
+  .phone.mobile {
+    display: block;
+    background: url("../assets/feed/mobile-phone-bg.svg") no-repeat;
+    background-size: 95%;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.9);
+  }
+  .phone.mobile .phone-content {
+    margin: 8px;
+  }
+
+  .phone.mobile #phone-frame {
+    display: block;
+    margin: auto;
+    position: absolute;
+    z-index: 99;
+    pointer-events: none;
+  }
+
+  .features-section {
+    padding: 21px;
+  }
+
+  .features-title {
+    padding: 1.5em;
+  }
+  .features-title h1 {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+  .features-title p {
+    font-size: 17px;
+    width: auto;
+  }
+
+  .features-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 112px;
+    row-gap: 64px;
+    padding: 1.5em;
+    margin: 0;
+  }
+
+  .features-card {
+    box-shadow: 0px 0.723457px 2.89383px rgba(0, 0, 0, 0.1);
+    padding: 42px;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+
+  .features-card img {
+    width: 68px;
+  }
+
+  .features-card h3 {
+    margin: 1.5em 0;
+    font-size: 17px;
+    font-family: "Playfair Display";
+  }
+
+  /* SOCIAL SHOPPING */
+
+  .social-shopping {
+    padding: 0;
+  }
+
+  .social-shopping .social-shopping-title {
+    padding: 21px;
+  }
+
+  .social-shopping .social-shopping-title h2 {
+    font-size: 30px;
+    padding-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .social-shopping .social-shopping-title p {
+    font-size: 17px;
+    width: auto;
+    margin: auto;
+    text-align: center;
+    padding: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .social-shopping-section {
+    column-gap: 16px;
+    padding: 32px 0 32px 21px;
+    align-items: flex-start;
+  }
+
+  .social-shopping-section:nth-child(2) {
+    padding: 1.5em 0;
+    padding: 32px 21px 32px 0;
+  }
+
+  .social-shopping-section:nth-child(2) .section-left {
+    flex: 3;
+  }
+
+  .social-shopping-section .section-left {
+    flex: 4;
+    position: relative;
+  }
+
+  .social-shopping-section .section-right {
+    flex: 2;
+    position: relative;
+  }
+
+  .social-shopping-section img.section-cover {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+  }
+
+  #social-filters-desc-image {
+    display: block;
+    margin: auto;
+    padding-top: 12px;
+    padding-right: 20%;
+    width: 120px;
+  }
+
+  .social-shopping-section img.icon {
+    width: 40px;
+    margin-bottom: 8px;
+  }
+
+  .social-shopping-section h1 {
+    font-size: 24px;
+    margin: 0 0 12px 0;
+    width: 90%;
+  }
+
+  .social-shopping-section p {
+    font-size: 17px;
+    margin: 0;
+    width: 65%;
+  }
+
+  /* Treasure Section */
+
+  .treasure-section {
+    padding: 1.5em;
+    margin-top: 2em;
+  }
+  .treasure-section .section-left p {
+    font-size: 17px;
+  }
+
+  .treasure-section h1 {
+    font-size: 30px;
+    margin-bottom: 32px;
+    font-weight: normal;
+  }
+  .treasure-section-body {
+    flex-direction: row;
+    column-gap: 21px;
+  }
+
+  .treasure-section-body .section-left {
+    flex: 3;
+  }
+
+  .treasure-section-body .section-right {
+    flex: 1;
+  }
+
+  .treasure-section-body .section-right img {
+    width: 100%;
+    max-height: 418px;
+    object-fit: scale-down;
+  }
+
+  /* ship-section */
+  .ship-section {
+    padding: 1.5em;
+    background-size: 50%;
+  }
+  .ship-section h2 {
+    font-size: 30px;
+    font-weight: normal;
+  }
+
+  .ship-section p {
+    font-size: 17px;
+    font-weight: normal;
+  }
+
+  /* pirates-section */
+  .pirates-section {
+    padding: 1.5em;
+    background-position: top;
+    background-size: 100%;
+  }
+  .pirates-section h1 {
+    font-size: 30px;
+  }
+
+  .pirates-section p {
+    font-size: 17px;
+  }
+
+  .pirates-section .primary-button {
+    width: 210px;
+    font-size: 15px;
+    padding: 6px 0;
+    margin-left: 20%;
+  }
+
+  .social-contact {
+    padding: 1.5em;
+    margin-top: 32px;
+  }
+  .social-contact .section-left img {
+    width: 112px;
+  }
+
+  .social-contact .section-right a {
+    display: block;
+    margin: 0;
+    font-size: 11px;
+    margin-right: 16px;
+  }
+  .social-contact .section-right {
+    margin-top: 12px;
+  }
+
+  /* footer-section */
+  .footer-section {
+    padding: 2em;
+    font-size: 12px;
+  }
+}

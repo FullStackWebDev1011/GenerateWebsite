@@ -1,0 +1,72 @@
+<div class="relative max-w-content mt-12">
+    <div class="absolute" style="left: -24rem; top:-6rem; z-index: -1; width: 72rem;">
+        <%~ includeFile("./shape.svg") %>
+    </div>
+
+    <h2 class="heading">Komm’ schnell an Bord</h2>
+    <p class="mt-8 max-w-3xl leading-wide text-gray-dark">
+        Flaschenpiraten, der Happy-Place wo Wein einkaufen und verkaufen
+        einfach nur Spaß macht.
+        Jetzt runterladen, teil der Piraten-Community werden und fette Beute
+        machen.
+    </p>
+    <a href="https://flaschenpiraten-2.web.app" class="btn mt-8">Hier geht´s an Bord</a>
+</div>
+
+<div class="mt-16">
+    <%~ includeFile("./divider") %>
+</div>
+
+<div class="sm:flex max-w-content mt-12 mb-8">
+    <div class="flex-1">
+
+        <div class="flex items-center text-2xl tracking-wide" href="/">
+            <img class="h-6" src="/assets/icon.png" alt="Flaschenpiraten icon">
+            <span class="ml-2 text-green font-bold">Flaschen</span>
+            <span class="text-gray-dark">piraten</span>
+        </div>
+
+        <div class="mt-4 italic text-gray-dark">
+            <p>Camí Vell d' Alcúdia Buzón 58</p>
+            <p>07300 Inca/Mallorca - España</p>
+        </div>
+
+        <a href="mailto:info@flaschenpiraten.de" class="mt-2 link">info@flaschenpiraten.de</a>
+
+        <p class="mt-2 text-gray-dark">
+            <span class="font-bold">EU Steuer-ID:</span> ESX9623756G
+        </p>
+
+
+        <p class="mt-2">
+            <a href="https://www.facebook.com/Flaschenpiraten" class="link mr-2">Facebook</a>
+            <a href="https://www.instagram.com/flaschenpiraten_wein_app/?hl=es" class="link mr-2">Instagram</a>
+            <a href="mailto:info@flaschenpiraten.de" class="link">Kontakt</a>
+        </p>
+    </div>
+
+    <div class="flex-1 mt-4 sm:mt-0">
+        <p class="font-bold text-gray-dark">Hier findest Du unsere:</p>
+
+        <p>
+            <a class="link" href="https://www.flaschenpiraten.de/datenschutz">
+                Datenschutzerklärung: ☠️DSGVO☠️
+            </a>
+        </p>
+
+        <p>
+            <a class="link" href="https://www.flaschenpiraten.de/flaschenpiraten-regeln">
+                Flaschenpiraten-Regeln: ☠️Nutzungsregeln ☠️
+            </a>
+        </p>
+
+        <p>
+            Link zur europäischen Online-Streitbeilegungsplattform:
+            <a class="link" href="https://ec.europa.eu/consumers/odr/">https://ec.europa.eu/consumers/odr/</a>.
+        </p>
+    </div>
+</div>
+
+<div class="mt-8 mb-2 text-center">
+    <p class="italic text-gray-dark">Flaschenpiraten © Alle Rechte vorbehalten.</p>
+</div>

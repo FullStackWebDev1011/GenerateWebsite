@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .max-w-content {
+        @apply px-4 sm:px-8 max-w-6xl mx-auto
+    }
+
+    .heading {
+        @apply text-3xl font-serif font-bold text-gray-dark
+    }
+
+    .btn {
+        @apply block text-center sm:inline-block px-6 py-3 text-white font-bold bg-green hover:bg-green-dark transition rounded-lg
+    }
+
+    .link {
+        @apply text-blue-500 underline
+    }
+}

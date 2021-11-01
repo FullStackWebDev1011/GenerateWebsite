@@ -1,0 +1,11 @@
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+<meta name="description" content="<%= it.seo.description %>">
+<meta property="og:url" content="<%= it.seo.pageUrl %>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="<%= it.seo.title %>">
+<meta property="og:description" content="%<= it.seo.description %>">
+<meta property="og:image" content="<%= it.seo.image %>">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Flaschenpiraten">
+<link rel="canonical" href="<%= it.seo.pageUrl %>">

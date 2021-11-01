@@ -1,0 +1,7 @@
+<header class="max-w-content">
+  <a class="flex items-center py-4 text-4xl tracking-wide" href="/">
+    <img class="h-9" src="/assets/icon.png" alt="Flaschenpiraten icon">
+    <span class="ml-4 text-green font-bold">Flaschen</span>
+    <span class="text-black">piraten</span>
+  </a>
+</header>
